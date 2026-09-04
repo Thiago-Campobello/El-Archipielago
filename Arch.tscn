@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b67ef3fm7bw5g"]
+
+[ext_resource type="Script" uid="uid://baibn3obg4lgp" path="res://pause.gd" id="1_2eybh"]
+[ext_resource type="PackedScene" uid="uid://xnatc63pt34x" path="res://Player.tscn" id="2_av43g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6o33"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6xc37"]
+
+[node name="Node3D" type="Node3D" unique_id=158509975]
+
+[node name="Pause" type="Node3D" parent="." unique_id=1693437073]
+process_mode = 3
+visible = false
+script = ExtResource("1_2eybh")
+
+[node name="Player" parent="." unique_id=674368194 instance=ExtResource("2_av43g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75025654, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=357539793]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=149345912]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_f6o33")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1221194534]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_6xc37")
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="." unique_id=180743066]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0.13177566, 0.9510498, 2.28167)
+light_color = Color(1, 0.5058824, 1, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+area_size = Vector2(3.2997756, 1.645947)
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1529020594]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.10314107, 0.9583235, -2.4034514)
+light_color = Color(1, 0.20392157, 1, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 1.02
+area_size = Vector2(3.2997756, 1.645947)
