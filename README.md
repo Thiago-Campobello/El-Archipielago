@@ -7,9 +7,8 @@
 
 ## 👥 Integrantes
 
-|  Integrante  |
+|  **Thiago Campobello**  |
 | :----------: |
-| **Thiago Campobello** |
 | **Joaquin Espinar** |
 | **Pia Machado** |
 | **Carolina Occhiato** |
