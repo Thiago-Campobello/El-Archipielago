@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bvqohhftehom2"]
+
+[ext_resource type="Script" uid="uid://cts1uxq1uawe6" path="res://enemigo.gd" id="1_becj5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8qs0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bnx68"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a5tj2"]
+
+[node name="Enemigo" type="CharacterBody3D" unique_id=1854415373]
+script = ExtResource("1_becj5")
+
+[node name="Cabeza" type="Area3D" parent="." unique_id=717915209]
+
+[node name="Cabeza" type="CollisionShape3D" parent="Cabeza" unique_id=1540337376]
+transform = Transform3D(1, 0, 0, 0, 0.75, 0, 0, 0, 1, 0, 0.625, 0)
+shape = SubResource("BoxShape3D_j8qs0")
+
+[node name="Cuerpo" type="Area3D" parent="." unique_id=1088377005]
+
+[node name="Cuerpo" type="CollisionShape3D" parent="Cuerpo" unique_id=1490953653]
+transform = Transform3D(1, 0, 0, 0, 1.25, 0, 0, 0, 1, 0, -0.375, 0)
+shape = SubResource("BoxShape3D_bnx68")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=379602392]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_a5tj2")
