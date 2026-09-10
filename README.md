@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.3-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.4-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
