@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2mxanarfccli" path="res://Player.gd" id="1_kpjcp"]
 [ext_resource type="Script" uid="uid://cuivt1hpvqure" path="res://Camara.gd" id="2_kne1u"]
+[ext_resource type="PackedScene" uid="uid://dq8oga6q61s2d" path="res://arma_aut.tscn" id="3_e80uo"]
 [ext_resource type="PackedScene" uid="uid://st16hn3g0eq8" path="res://arma.tscn" id="3_kne1u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44gmc"]
@@ -26,5 +27,8 @@ mesh = SubResource("BoxMesh_6xc37")
 [node name="Camara1p" type="Camera3D" parent="Camara" unique_id=1559177322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5528075, 0)
 
-[node name="Arma" parent="Camara/Camara1p" unique_id=1622712851 instance=ExtResource("3_kne1u")]
+[node name="Arma_aut" parent="Camara/Camara1p" unique_id=1622712851 instance=ExtResource("3_e80uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.7710758)
+
+[node name="Arma" parent="Camara/Camara1p" unique_id=1521902080 instance=ExtResource("3_kne1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.25177854)

@@ -50,6 +50,9 @@ _data = {
 &"golpe": SubResource("Animation_a5tj2")
 }
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_kcw23"]
+viewport_path = NodePath("SubViewport")
+
 [node name="Enemigo" type="CharacterBody3D" unique_id=1854415373]
 script = ExtResource("1_becj5")
 
@@ -75,3 +78,20 @@ mesh = SubResource("BoxMesh_a5tj2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1005026081]
 libraries/ = SubResource("AnimationLibrary_moxti")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=148280957]
+transparent_bg = true
+size = Vector2i(200, 25)
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport" unique_id=636244578]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1924361978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1882482, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_kcw23")

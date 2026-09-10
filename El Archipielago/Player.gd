@@ -22,3 +22,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	move_and_slide()
+func _input(event):
+	if Input.is_action_just_pressed("1"):
+		$Camara/Camara1p/Arma.show()
+		$Camara/Camara1p/Arma_aut.hide()
+	if Input.is_action_just_pressed("2"):
+		$Camara/Camara1p/Arma.hide()
+		$Camara/Camara1p/Arma_aut.show()
+	if Input.is_action_just_pressed("3"):
+		$Camara/Camara1p/Arma.hide()
+		$Camara/Camara1p/Arma_aut.hide()
+	if Input.is_action_just_pressed("4"):
+		$Camara/Camara1p/Arma.hide()
+		$Camara/Camara1p/Arma_aut.hide()

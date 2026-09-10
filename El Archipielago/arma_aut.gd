@@ -9,7 +9,7 @@ func _ready() -> void:
 	posicion_original=position
 	punto_disparo = find_child("Muzzle", true, false) as Marker3D
 func _input(event):
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		if visible:
 			shoot()
 	if Input.is_action_just_pressed("reload"):
