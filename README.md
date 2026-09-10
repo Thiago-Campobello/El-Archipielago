@@ -53,7 +53,8 @@ Se añade el sistema del enemigo, el de vida, este todavía no tiene IA, pero co
 
 **Fecha:** 08/09/2026
 
-### 🟡 Alpha v1.1 — `Prototipo de enemigo y arma`
+### 🟡 Alpha v1.3
+— `Prototipo de enemigo y arma`
 Se modifico el arma, ahora tiene cooldown, cargador y cantidad de balas, se le agrego la movilidad en eje Y, el prototipo de enemigo ahora tiene gravedad y colisiones. Se agregó menú 2d funcional al presionar esc. 
 
 **Fecha:** 09/09/2026
