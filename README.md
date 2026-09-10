@@ -40,6 +40,7 @@
 | **Alpha v1.0** | 03/09/2026 | 🟡 Desarrollo | Inicio del proyecto      |
 | **Alpha v1.1** | 08/09/2026 | 🟡 Desarrollo | Agrega arma y sistema de vida    |
 | **Alpha v1.3** | 09/09/2026 | 🟡 Desarrollo | Mejora arma, agrega menú    |
+| **Alpha v1.4** | 10/09/2026 | 🟡 Desarrollo | Mejoras en el enemigo y arma    |
 
 ## 📝 Changelog
 
@@ -54,17 +55,21 @@ Se añade el sistema del enemigo, el de vida, este todavía no tiene IA, pero co
 **Fecha:** 08/09/2026
 
 ### 🟡 Alpha v1.3
-— `Prototipo de enemigo y arma`
 Se modifico el arma, ahora tiene cooldown, cargador y cantidad de balas, se le agrego la movilidad en eje Y, el prototipo de enemigo ahora tiene gravedad y colisiones. Se agregó menú 2d funcional al presionar esc. 
 
 **Fecha:** 09/09/2026
+
+### 🟡 Alpha v1.4
+Se agrega arma automatica, agregamos IA del enemigo, este se mueve buscando acercarse al jugador, se le añadió una barra de vida, se agrandó el mapa para probar el movimiento del enemigo, se añadió escena de bala, para que cuando dispares se vea esta moverse. Se le añadió retroceso al arma
+
+**Fecha:** 10/09/2026
 
 ## 📊 Estado del proyecto
 
 **Versión actual:** `Alpha v1.3`
 
 ```text
-█░░░░░░░░░░░░░░░░░░░ 5%
+█░░░░░░░░░░░░░░░░░░░ 7%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.
