@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dac7pb2gxnadg"]
+
+[ext_resource type="Script" uid="uid://ivrh5mh87rl0" path="res://control.gd" id="1_0fbet"]
+
+[node name="Options" type="Control" unique_id=807118704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=888085084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21253401, 0.18495044, 0.22246653, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=668144673]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -142.5
+offset_right = 266.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 22
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1156995723]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=1143849400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "OPCIONES"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=1130430948]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "SALIR
+"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_atras_pressed"]

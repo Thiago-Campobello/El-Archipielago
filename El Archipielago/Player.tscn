@@ -19,11 +19,12 @@ shape = SubResource("BoxShape3D_44gmc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.44037098)
 script = ExtResource("2_kne1u")
 
-[node name="Arma" parent="Camara" unique_id=1622712851 instance=ExtResource("3_kne1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.25177854)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camara" unique_id=1769665527]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.44037098)
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0.44037098)
 mesh = SubResource("BoxMesh_6xc37")
 
 [node name="Camara1p" type="Camera3D" parent="Camara" unique_id=1559177322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5528075, 0)
+
+[node name="Arma" parent="Camara/Camara1p" unique_id=1622712851 instance=ExtResource("3_kne1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.25177854)

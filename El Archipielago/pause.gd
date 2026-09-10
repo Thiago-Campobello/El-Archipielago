@@ -1,5 +1,16 @@
 extends Node3D
+
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	$Options.hide()
 func _input(event):
-	if Input.is_action_just_pressed("pause"):
-		get_tree().paused=not get_tree().paused
-		Input.mouse_mode= Input.MOUSE_MODE_VISIBLE if get_tree().paused else Input.MOUSE_MODE_CAPTURED
+	if event.is_action_pressed("pause"):
+		pause()
+func pause():
+	get_tree().paused = not get_tree().paused
+	if get_tree().paused: $Options.show()
+	else: $Options.hide()
+	if get_tree().paused:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

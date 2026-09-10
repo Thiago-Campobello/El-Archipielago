@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://urb0kbsiqwc8" path="res://arma.gd" id="1_uya3a"]
 [ext_resource type="PackedScene" uid="uid://b7j8rwm7nt3si" path="res://arma.gltf" id="1_vp40w"]
+[ext_resource type="Script" uid="uid://76ickjbiy4fr" path="res://fire_cooldown.gd" id="3_bftl6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_reb6k"]
 size = Vector3(0.23217773, 0.41015625, 0.7767334)
@@ -22,3 +23,8 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 transform = Transform3D(2, 0, 0, 0, -1.0927847e-06, -2, 0, 25, -8.742278e-08, -6.376207e-05, 0.3427106, -0.6310843)
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="FireCooldown" type="Timer" parent="." unique_id=1946188422]
+wait_time = 0.2
+one_shot = true
+script = ExtResource("3_bftl6")
