@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7j8rwm7nt3si"
-path="res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"
+uid="uid://cr5ub8e7crdxd"
+path="res://.godot/imported/martillo.glb-39244ef359fb74c1b9670ab310aec27b.scn"
 
 [deps]
 
-source_file="res://arma.gltf"
-dest_files=["res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"]
+source_file="res://martillo.glb"
+dest_files=["res://.godot/imported/martillo.glb-39244ef359fb74c1b9670ab310aec27b.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1

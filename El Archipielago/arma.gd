@@ -1,5 +1,7 @@
 extends Node3D
+var hud: CanvasLayer
 var balas=30
+var balasmax=30
 var cargador=100
 var firecoldw=0.2
 var posicion_original: Vector3
@@ -9,19 +11,19 @@ func _ready() -> void:
 	posicion_original=position
 	punto_disparo = find_child("Muzzle", true, false) as Marker3D
 func _input(event):
-	if Input.is_action_just_pressed("shoot"):
-		if visible:
-			shoot()
-	if Input.is_action_just_pressed("reload"):
-		if balas<30:
-			var a=30-balas
-			if cargador>a:
-				balas+=a
-				cargador-=a
-			else:
-				var b=a-cargador
-				balas+=b
-				cargador-=b
+	if visible:
+		if Input.is_action_just_pressed("shoot"):
+				shoot()
+		if Input.is_action_just_pressed("reload"):
+			if balas<balasmax:
+				var a=balasmax-balas
+				if cargador>a && cargador>0:
+					balas+=a
+					cargador-=a
+				elif cargador>0:
+					balas+=cargador
+					cargador=0
+			hud.actualizar_balas(balas,balasmax,cargador)
 func _process(delta):
 	position = position.lerp(posicion_original, 10.0 * delta)
 func shoot():
@@ -31,6 +33,7 @@ func shoot():
 	position.z += 0.2
 	if balas>0:
 			balas-=1
+			hud.actualizar_balas(balas,balasmax,cargador)
 			if bala_escena and punto_disparo:
 				var nueva_bala = bala_escena.instantiate()
 				get_tree().current_scene.add_child(nueva_bala)

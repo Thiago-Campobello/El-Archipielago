@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7j8rwm7nt3si"
-path="res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"
+uid="uid://cf5f7bde0vj6v"
+path="res://.godot/imported/martillo-hacha.glb-94b6155e11561663b439c3dc23b20eda.scn"
 
 [deps]
 
-source_file="res://arma.gltf"
-dest_files=["res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"]
+source_file="res://martillo-hacha.glb"
+dest_files=["res://.godot/imported/martillo-hacha.glb-94b6155e11561663b439c3dc23b20eda.scn"]
 
 [params]
 

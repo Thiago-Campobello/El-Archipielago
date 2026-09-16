@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var velocidad = 40.0
+@export var velocidad = 150.0
 
 func _ready() -> void:
 	crear_temporizador_autodestruccion()

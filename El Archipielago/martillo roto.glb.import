@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7j8rwm7nt3si"
-path="res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"
+uid="uid://d3646mh4ep5jg"
+path="res://.godot/imported/martillo roto.glb-deb8f9928a42ed0a91f2586594fc9b57.scn"
 
 [deps]
 
-source_file="res://arma.gltf"
-dest_files=["res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"]
+source_file="res://martillo roto.glb"
+dest_files=["res://.godot/imported/martillo roto.glb-deb8f9928a42ed0a91f2586594fc9b57.scn"]
 
 [params]
 

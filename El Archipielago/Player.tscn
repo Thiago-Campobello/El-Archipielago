@@ -9,26 +9,35 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_6xc37"]
 
-[node name="Player" type="CharacterBody3D" unique_id=674368194]
+[node name="Player" type="CharacterBody3D" unique_id=1549686976]
 script = ExtResource("1_kpjcp")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=184199896]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=363769616]
 physics_interpolation_mode = 1
 shape = SubResource("BoxShape3D_44gmc")
 
-[node name="Camara" type="Node3D" parent="." unique_id=835680618]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.44037098)
+[node name="Camara" type="Node3D" parent="." unique_id=1179477595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.440371)
 script = ExtResource("2_kne1u")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camara" unique_id=1769665527]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0.44037098)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camara" unique_id=390991986]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0.440371)
 mesh = SubResource("BoxMesh_6xc37")
 
-[node name="Camara1p" type="Camera3D" parent="Camara" unique_id=1559177322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5528075, 0)
+[node name="Camara1p" type="Camera3D" parent="Camara" unique_id=185949244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552808, 0)
 
-[node name="Arma_aut" parent="Camara/Camara1p" unique_id=1622712851 instance=ExtResource("3_e80uo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.7710758)
+[node name="Arma" parent="Camara/Camara1p" unique_id=985681168 instance=ExtResource("3_kne1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.372982, -0.382753, -0.251779)
 
-[node name="Arma" parent="Camara/Camara1p" unique_id=1521902080 instance=ExtResource("3_kne1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37298226, -0.38275337, -0.25177854)
+[node name="Arma_aut" parent="Camara/Camara1p" unique_id=1980526449 instance=ExtResource("3_e80uo")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.372982, -0.269764, -0.87356496)
+visible = false
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Camara" unique_id=2023165586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552808, 0)
+spring_length = 4.0
+
+[node name="Camera3p" type="Camera3D" parent="Camara/SpringArm3D" unique_id=1866543319]
+transform = Transform3D(1, 0, 0, 0, 0.99969697, 0.024616411, 0, -0.024616411, 0.99969697, 0, 0.6997972, 5.251526)
+fov = 95.8

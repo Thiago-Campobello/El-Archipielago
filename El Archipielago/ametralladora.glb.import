@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b7j8rwm7nt3si"
-path="res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"
+uid="uid://d2esrqf4x1qb2"
+path="res://.godot/imported/ametralladora.glb-60f15398de0d2c92134be9e9340ff491.scn"
 
 [deps]
 
-source_file="res://arma.gltf"
-dest_files=["res://.godot/imported/arma.gltf-13223e165ac62acbb03863ee09849cee.scn"]
+source_file="res://ametralladora.glb"
+dest_files=["res://.godot/imported/ametralladora.glb-60f15398de0d2c92134be9e9340ff491.scn"]
 
 [params]
 

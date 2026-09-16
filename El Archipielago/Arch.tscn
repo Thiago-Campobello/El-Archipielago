@@ -3,76 +3,81 @@
 [ext_resource type="Script" uid="uid://baibn3obg4lgp" path="res://pause.gd" id="1_2eybh"]
 [ext_resource type="PackedScene" uid="uid://dac7pb2gxnadg" path="res://control.tscn" id="1_2gltf"]
 [ext_resource type="PackedScene" uid="uid://xnatc63pt34x" path="res://Player.tscn" id="2_av43g"]
-[ext_resource type="PackedScene" uid="uid://bvqohhftehom2" path="res://enemigo.tscn" id="3_av43g"]
+[ext_resource type="Script" uid="uid://dr43p2pqeg0ja" path="res://hud.gd" id="4_5i6jr"]
+[ext_resource type="PackedScene" uid="uid://cvh5eym3haro8" path="res://ISLA_ARCHIPIELAGO_COLISION.glb" id="5_5i6jr"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_f6o33"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o53tk"]
+sky_top_color = Color(0.368348, 0.489749, 0.652705, 1)
+sky_horizon_color = Color(0.633559, 0.679548, 0.781541, 1)
+ground_bottom_color = Color(0.0824434, 0.145001, 0.390016, 1)
+ground_horizon_color = Color(0.633559, 0.679548, 0.781541, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_6xc37"]
+[sub_resource type="Sky" id="Sky_n4c0l"]
+sky_material = SubResource("ProceduralSkyMaterial_o53tk")
 
-[node name="Node3D" type="Node3D" unique_id=158509975]
+[sub_resource type="Environment" id="Environment_g382f"]
+background_mode = 2
+sky = SubResource("Sky_n4c0l")
 
-[node name="Pause" type="Node3D" parent="." unique_id=1693437073]
+[node name="Arch" type="Node3D" unique_id=1194264189]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=726550345]
+environment = SubResource("Environment_g382f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=909557023]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_color = Color(0.86507, 0.825831, 0.398162, 1)
+light_energy = 14.4
+shadow_enabled = true
+directional_shadow_max_distance = 448.0
+
+[node name="Pause" type="Node3D" parent="." unique_id=82725671]
 process_mode = 3
 visible = false
 script = ExtResource("1_2eybh")
 
-[node name="Options" parent="Pause" unique_id=807118704 instance=ExtResource("1_2gltf")]
+[node name="Options" parent="Pause" unique_id=1679884832 instance=ExtResource("1_2gltf")]
 
-[node name="Player" parent="." unique_id=674368194 instance=ExtResource("2_av43g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5429544, 1.162765, 0)
+[node name="Player" parent="." unique_id=1188762420 node_paths=PackedStringArray("hud") instance=ExtResource("2_av43g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54295, 0.6639693, 0)
+hud = NodePath("../HUD")
 
-[node name="Enemigo" parent="." unique_id=1854415373 instance=ExtResource("3_av43g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.2, 0)
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2040774928]
+script = ExtResource("4_5i6jr")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=357539793]
+[node name="Vida" type="PanelContainer" parent="HUD" unique_id=2102206226]
+offset_left = 33.0
+offset_top = 542.0
+offset_right = 365.0
+offset_bottom = 625.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=149345912]
-transform = Transform3D(30, 0, 0, 0, 0.1, 0, 0, 0, 30, 0, 0, 0)
-shape = SubResource("BoxShape3D_f6o33")
+[node name="Vida" type="Label" parent="HUD/Vida" unique_id=1848248634]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1221194534]
-transform = Transform3D(30, 0, 0, 0, 0.1, 0, 0, 0, 30, 0, 0, -0.874558)
-mesh = SubResource("BoxMesh_6xc37")
+[node name="Municion" type="PanelContainer" parent="HUD" unique_id=237767078]
+offset_left = 856.0
+offset_top = 471.0
+offset_right = 1111.0
+offset_bottom = 593.0
 
-[node name="AreaLight3D2" type="AreaLight3D" parent="." unique_id=180743066]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13177566, 0.9510498, 14.3839855)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 1.0
-light_specular = 16.0
-area_range = 4096.0
-area_size = Vector2(29.856482, 2.3883553)
+[node name="Municion" type="Label" parent="HUD/Municion" unique_id=56885964]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.877616, 0.877616, 0.877616, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AreaLight3D2" type="AreaLight3D" parent="AreaLight3D2" unique_id=407565545]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.721234, 0.67385006, -15.357086)
-light_color = Color(1, 0.16862746, 1, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 1.0
-light_specular = 16.0
-area_range = 4096.0
-area_size = Vector2(29.856482, 2.3883553)
+[node name="Cargador" type="Label" parent="HUD/Municion/Municion" unique_id=1150333939]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 31.0
+offset_right = 244.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.341568, 0.354494, 0.357725, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AreaLight3D2" type="AreaLight3D" parent="AreaLight3D2/AreaLight3D2" unique_id=700376153]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.94054276, -0.3771925, -31.100706)
-light_color = Color(1, 0.14509805, 1, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 1.0
-light_specular = 16.0
-area_range = 4096.0
-area_size = Vector2(29.856482, 2.3883553)
-
-[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1529020594]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.10314107, 0.9583235, -15.991201)
-light_color = Color(1, 0.22352941, 1, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 1.0
-light_specular = 16.0
-area_range = 4096.0
-area_size = Vector2(29.97138, 2.2757244)
+[node name="ISLA_ARCHIPIELAGO_COLISION" parent="." unique_id=56811335 instance=ExtResource("5_5i6jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.981905, 0)
