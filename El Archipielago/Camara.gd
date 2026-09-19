@@ -8,10 +8,10 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("apuntar") && get_viewport().get_camera_3d()==$Camara1p:
-		if $Camara1p/Arma.visible:
-			$Camara1p/Arma.position=apuntadoarma1
-		if $Camara1p/Arma_aut.visible:
-			$Camara1p/Arma_aut.position=apuntadoarma2
+		if $Camara1p/Slot2/Arma.visible:
+			$Camara1p/Slot2/Arma.position=apuntadoarma1
+		if $Camara1p/Slot3/Arma_aut.visible:
+			$Camara1p/Slot3/Arma_aut.position=apuntadoarma2
 		$Camara1p.fov=65
 func _input(event):
 	if Input.is_action_just_pressed("desbq_mouse"):
@@ -21,8 +21,8 @@ func _input(event):
 				Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	if Input.is_action_just_released("apuntar"):
 		$Camara1p.fov=75
-		$Camara1p/Arma.position=posinarma1
-		$Camara1p/Arma_aut.position=posinarma2
+		$Camara1p/Slot2/Arma.position=posinarma1
+		$Camara1p/Slot3/Arma_aut.position=posinarma2
 	if event is InputEventMouseMotion:
 		if Input.mouse_mode==Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.relative.x*sensibility)
