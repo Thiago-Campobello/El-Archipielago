@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.5-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.6-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
@@ -42,6 +42,7 @@
 | **Alpha v1.3** | 09/09/2026 | 🟡 Desarrollo | Mejora arma, agrega menú    |
 | **Alpha v1.4** | 10/09/2026 | 🟡 Desarrollo | Mejoras en el enemigo y arma    |
 | **Alpha v1.5** | 16/09/2026 | 🟡 Desarrollo | Intensificación en el hud y mapa    |
+| **Alpha v1.6** | 19/09/2026 | 🟡 Desarrollo | Se añade inventario al hud, correr y menu opciones   |
 
 ## 📝 Changelog
 
@@ -68,13 +69,16 @@ Se agrega arma automatica, agregamos IA del enemigo, este se mueve buscando acer
 Se agrega un mapa de prueba como base de isla, se añade 3ra persona, se añade un fondo y sol para la iluminación, se añadió diseño del enemigo y de el arma automática, se añade HUD con la vida del jugador y las balas que tengas en cargador y en el arma, que el enemigo saque vida cuerpo a cuerpo, animación del arma del enemigo. Ahora el enemigo deambula por el mapa hasta detectar al jugador y no lo detecta todo el tiempo
 
 **Fecha:** 16/09/2026
+### 🟡 Alpha v1.6
+Se agregó un sistema de inventario, con aplicacion en el hud, ademas de que se movieron un par de cosas del mismo para mejor visibilidad, se añade el input y funcion para correr, un menu de opciones de controles en la pausa, el cual es funcional, solo le falta que se marquen los conflictos de tecla, si es que otra tecla está usando la misma
 
+**Fecha:** 19/09/2026
 ## 📊 Estado del proyecto
 
-**Versión actual:** `Alpha v1.5`
+**Versión actual:** `Alpha v1.6`
 
 ```text
-█░░░░░░░░░░░░░░░░░░░ 9%
+██░░░░░░░░░░░░░░░░░░ 13%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.
