@@ -16,9 +16,8 @@ size = Vector3(1, 1, 0.589539)
 [sub_resource type="ViewportTexture" id="ViewportTexture_kcw23"]
 viewport_path = NodePath("SubViewport")
 
-[node name="Enemigo" type="CharacterBody3D" unique_id=940142213 node_paths=PackedStringArray("nodo_hacha")]
+[node name="Enemigo" type="CharacterBody3D" unique_id=940142213]
 script = ExtResource("1_becj5")
-nodo_hacha = NodePath("martillo")
 
 [node name="Cabeza" type="Area3D" parent="." unique_id=837152425]
 
@@ -37,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0.993077, 0)
 shape = SubResource("BoxShape3D_cjdqc")
 
 [node name="martillo" parent="." unique_id=607977867 instance=ExtResource("2_moxti")]
-transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 0.2720319, 1.6470622, -0.4105357)
+transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0.2720319, 1.6470622, -0.4105357)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=194797954]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)

@@ -19,6 +19,10 @@ sky_material = SubResource("ProceduralSkyMaterial_o53tk")
 background_mode = 2
 sky = SubResource("Sky_n4c0l")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhrk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_frjqa"]
+
 [node name="Arch" type="Node3D" unique_id=1194264189]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=726550345]
@@ -37,47 +41,288 @@ visible = false
 script = ExtResource("1_2eybh")
 
 [node name="Options" parent="Pause" unique_id=1679884832 instance=ExtResource("1_2gltf")]
+custom_minimum_size = Vector2(64, 64)
 
-[node name="Player" parent="." unique_id=1188762420 node_paths=PackedStringArray("hud") instance=ExtResource("2_av43g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54295, 0.6639693, 0)
-hud = NodePath("../HUD")
-
-[node name="HUD" type="CanvasLayer" parent="." unique_id=2040774928]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2125666123]
 script = ExtResource("4_5i6jr")
 
-[node name="Vida" type="PanelContainer" parent="HUD" unique_id=2102206226]
-offset_left = 33.0
-offset_top = 542.0
-offset_right = 365.0
-offset_bottom = 625.0
+[node name="Vida" type="PanelContainer" parent="HUD" unique_id=109715646]
+custom_minimum_size = Vector2(5, 5)
+offset_left = 421.0
+offset_top = 589.0
+offset_right = 768.0
+offset_bottom = 624.0
 
-[node name="Vida" type="Label" parent="HUD/Vida" unique_id=1848248634]
+[node name="Vida" type="Label" parent="HUD/Vida" unique_id=1293910423]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Municion" type="PanelContainer" parent="HUD" unique_id=237767078]
-offset_left = 856.0
-offset_top = 471.0
-offset_right = 1111.0
+[node name="Municion" type="PanelContainer" parent="HUD" unique_id=232134516]
+offset_left = 895.0
+offset_top = 523.0
+offset_right = 1112.0
 offset_bottom = 593.0
 
-[node name="Municion" type="Label" parent="HUD/Municion" unique_id=56885964]
+[node name="Municion" type="Label" parent="HUD/Municion" unique_id=676649905]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.877616, 0.877616, 0.877616, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cargador" type="Label" parent="HUD/Municion/Municion" unique_id=1150333939]
+[node name="Cargador" type="Label" parent="HUD/Municion/Municion" unique_id=979558444]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 31.0
-offset_right = 244.0
-offset_bottom = 63.0
+offset_left = 4.0
+offset_top = 16.0
+offset_right = 211.0
+offset_bottom = 47.0
 theme_override_colors/font_color = Color(0.341568, 0.354494, 0.357725, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Margen" type="MarginContainer" parent="HUD" unique_id=1356588139]
+custom_minimum_size = Vector2(64, 64)
+offset_left = -77.0
+offset_top = 438.0
+offset_right = 404.0
+offset_bottom = 638.0
+
+[node name="Container" type="BoxContainer" parent="HUD/Margen" unique_id=908171856]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Filas" type="VBoxContainer" parent="HUD/Margen/Container" unique_id=858319785]
+layout_mode = 2
+alignment = 1
+
+[node name="Fila1" type="HBoxContainer" parent="HUD/Margen/Container/Filas" unique_id=672990026]
+layout_mode = 2
+
+[node name="vacio1" type="Panel" parent="HUD/Margen/Container/Filas/Fila1" unique_id=1384925574]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Vacío2" type="Panel" parent="HUD/Margen/Container/Filas/Fila1" unique_id=454868774]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_frjqa")
+
+[node name="Slot1" type="Panel" parent="HUD/Margen/Container/Filas/Fila1" unique_id=1861587293]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N" type="Label" parent="HUD/Margen/Container/Filas/Fila1/Slot1" unique_id=1943978967]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 41.0
+offset_bottom = 26.0
+text = "1"
+
+[node name="Obj" type="Label" parent="HUD/Margen/Container/Filas/Fila1/Slot1" unique_id=205080771]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 25.0
+offset_right = 63.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 14
+text = "PUÑOS"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila1/Slot1" unique_id=1922693685]
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Fila2" type="HBoxContainer" parent="HUD/Margen/Container/Filas" unique_id=355852369]
+layout_mode = 2
+
+[node name="Vacío2" type="Panel" parent="HUD/Margen/Container/Filas/Fila2" unique_id=1337699494]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot2" type="Panel" parent="HUD/Margen/Container/Filas/Fila2" unique_id=358376472]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N2" type="Label" parent="HUD/Margen/Container/Filas/Fila2/Slot2" unique_id=2034797060]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "2"
+
+[node name="Obj2" type="Label" parent="HUD/Margen/Container/Filas/Fila2/Slot2" unique_id=614932879]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 69.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 14
+text = "PISTOLA"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila2/Slot2" unique_id=1194907245]
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Vacío" type="Panel" parent="HUD/Margen/Container/Filas/Fila2" unique_id=1707627616]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot3" type="Panel" parent="HUD/Margen/Container/Filas/Fila2" unique_id=780042835]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N3" type="Label" parent="HUD/Margen/Container/Filas/Fila2/Slot3" unique_id=310905747]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "3"
+
+[node name="Obj3" type="Label" parent="HUD/Margen/Container/Filas/Fila2/Slot3" unique_id=744205939]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 77.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 13
+text = "SUBFUSIL"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila2/Slot3" unique_id=1199352739]
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Fila3" type="HBoxContainer" parent="HUD/Margen/Container/Filas" unique_id=334392775]
+layout_mode = 2
+alignment = 1
+
+[node name="Slot4" type="Panel" parent="HUD/Margen/Container/Filas/Fila3" unique_id=1221180085]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N4" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot4" unique_id=320207186]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "4"
+
+[node name="Obj4" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot4" unique_id=652609426]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 55.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 14
+text = "DAGA"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila3/Slot4" unique_id=1842370407]
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Vacío" type="Panel" parent="HUD/Margen/Container/Filas/Fila3" unique_id=1688075530]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot5" type="Panel" parent="HUD/Margen/Container/Filas/Fila3" unique_id=782083772]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N5" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot5" unique_id=573459219]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "5"
+
+[node name="Obj5" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot5" unique_id=1234294395]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 27.0
+offset_right = 80.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 12
+text = "GRANADA"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila3/Slot5" unique_id=1437646551]
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Vacío2" type="Panel" parent="HUD/Margen/Container/Filas/Fila3" unique_id=1557534868]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot6" type="Panel" parent="HUD/Margen/Container/Filas/Fila3" unique_id=1612723921]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N6" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot6" unique_id=1337997167]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 24.0
+text = "6"
+
+[node name="Obj6" type="Label" parent="HUD/Margen/Container/Filas/Fila3/Slot6" unique_id=1919128371]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 84.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 11
+text = "BOTIQUÍN"
+
+[node name="BordeSeleccion" type="ReferenceRect" parent="HUD/Margen/Container/Filas/Fila3/Slot6" unique_id=1582042909]
+visible = false
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+border_color = Color(0.7964979, 0.8098193, 0, 1)
+border_width = 3.0
+editor_only = false
+
+[node name="Player" parent="HUD" unique_id=1188762420 node_paths=PackedStringArray("hud") instance=ExtResource("2_av43g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8797011, 2.0010777, -0.9448166)
+hud = NodePath("..")
+
 [node name="ISLA_ARCHIPIELAGO_COLISION" parent="." unique_id=56811335 instance=ExtResource("5_5i6jr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.981905, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1264, -3.4327796, -0.35368395)

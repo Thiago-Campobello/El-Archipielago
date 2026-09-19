@@ -10,7 +10,23 @@ var bala_escena = preload("res://BALA.tscn")
 func _ready() -> void:
 	posicion_original=position
 	punto_disparo = find_child("Muzzle", true, false) as Marker3D
-func _input(event):
+	var nodo_hud = get_tree().root.find_child("HUD", true, false)
+	if nodo_hud:
+		nodo_hud.slot_cambiado.connect(_on_slot_cambiado)
+
+func _on_slot_cambiado(nombre_arma: String) -> void:
+	hide()
+		
+	match nombre_arma:
+		"PISTOLA":
+			var pistola =get_parent().get_node_or_null("Arma")
+			if pistola: pistola.show()
+		"SUBFUSIL":
+			var subfusil =get_parent().get_node_or_null("Arma_aut")
+			if subfusil: subfusil.show()
+
+func _process(delta):
+	position = position.lerp(posicion_original, 10.0 * delta)
 	if visible:
 		if Input.is_action_just_pressed("shoot"):
 				shoot()
@@ -24,13 +40,14 @@ func _input(event):
 					balas+=cargador
 					cargador=0
 			hud.actualizar_balas(balas,balasmax,cargador)
-func _process(delta):
-	position = position.lerp(posicion_original, 10.0 * delta)
 func shoot():
 	if !$FireCooldown.is_stopped():
 		return
 	var mult=1
-	position.z += 0.2
+	if Input.is_action_pressed("apuntar") && get_viewport().get_camera_3d()==get_parent():
+		position.z += 0.05
+	else:
+		position.z += 0.2
 	if balas>0:
 			balas-=1
 			hud.actualizar_balas(balas,balasmax,cargador)

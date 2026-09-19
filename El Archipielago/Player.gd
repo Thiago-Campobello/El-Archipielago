@@ -11,12 +11,10 @@ var muerto = false
 var en_primera_persona: bool = false
 
 func _ready():
-	$Camara/Camara1p/Arma_aut.hud=hud
-	$Camara/Camara1p/Arma.hud=hud
-	
-	print(hud," ",$Camara/Camara1p/Arma_aut.hud," ",$Camara/Camara1p/Arma.hud)
+	$Camara/Camara1p/Slot3/Arma_aut.hud=hud
+	$Camara/Camara1p/Slot2/Arma.hud=hud
 	hud.actualizar_vida(vida,vidamax)
-	hud.actualizar_balas($Camara/Camara1p/Arma.balas,$Camara/Camara1p/Arma.balasmax,$Camara/Camara1p/Arma.cargador)
+	hud.actualizar_balas($Camara/Camara1p/Slot2/Arma.balas,$Camara/Camara1p/Slot2/Arma.balasmax,$Camara/Camara1p/Slot2/Arma.cargador)
 	
 	en_primera_persona = false
 	camara_1p.make_current()
@@ -50,31 +48,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	if Input.is_action_pressed("run") && is_on_floor():
+		velocity.z*=1.5
+		velocity.x*=1.5
 	move_and_slide()
-
-func _input(event):
+	
+func _input(_event):
 	if muerto: return
-
-	if event is InputEventKey and event.pressed and event.keycode == KEY_F5:
+	if Input.is_action_just_pressed("alt_camara"):
 		alternar_perspectiva()
-
-	if Input.is_action_just_pressed("1"):
-		$Camara/Camara1p/Arma.show()
-		$Camara/Camara1p/Arma_aut.hide()
-		hud.actualizar_vida(vida,vidamax)
-		hud.actualizar_balas($Camara/Camara1p/Arma.balas,$Camara/Camara1p/Arma.balasmax,$Camara/Camara1p/Arma.cargador)
-	if Input.is_action_just_pressed("2"):
-		$Camara/Camara1p/Arma.hide()
-		$Camara/Camara1p/Arma_aut.show()
-		hud.actualizar_vida(vida,vidamax)
-		hud.actualizar_balas($Camara/Camara1p/Arma_aut.balas,$Camara/Camara1p/Arma_aut.balasmax,$Camara/Camara1p/Arma_aut.cargador)
-	if Input.is_action_just_pressed("3"):
-		$Camara/Camara1p/Arma.hide()
-		$Camara/Camara1p/Arma_aut.hide()
-	if Input.is_action_just_pressed("4"):
-		$Camara/Camara1p/Arma.hide()
-		$Camara/Camara1p/Arma_aut.hide()
-
 func alternar_perspectiva():
 	en_primera_persona = !en_primera_persona
 	if en_primera_persona:
@@ -82,8 +64,9 @@ func alternar_perspectiva():
 	else:
 		camara_3p.make_current()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 		hud.actualizar_vida(vida,vidamax)
+
 
 func take_damage(daño: int):
 	if muerto:
@@ -103,14 +86,14 @@ func morir():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	if has_node("Camara/Camara1p/Arma"):
-		$Camara/Camara1p/Arma.set_process(false)
-		$Camara/Camara1p/Arma.set_physics_process(false)
-		$Camara/Camara1p/Arma.set_process_input(false)
+		$Camara/Camara1p/Slot2/Arma.set_process(false)
+		$Camara/Camara1p/Slot2/Arma.set_physics_process(false)
+		$Camara/Camara1p/Slot2/Arma.set_process_input(false)
 		
 	if has_node("Camara/Camara1p/Arma_aut"):
-		$Camara/Camara1p/Arma_aut.set_process(false)
-		$Camara/Camara1p/Arma_aut.set_physics_process(false)
-		$Camara/Camara1p/Arma_aut.set_process_input(false)
+		$Camara/Camara1p/Slot3/Arma_aut.set_process(false)
+		$Camara/Camara1p/Slot3/Arma_aut.set_physics_process(false)
+		$Camara/Camara1p/Slot3/Arma_aut.set_process_input(false)
 	
 	var centro = CenterContainer.new()
 	centro.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)

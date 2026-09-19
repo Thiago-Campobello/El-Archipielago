@@ -9,7 +9,9 @@ func _input(event):
 func pause():
 	get_tree().paused = not get_tree().paused
 	if get_tree().paused: 
-		$Options.show() 
+		$Options.show()
+		$Options/Opciones.hide()
+		$Options/VBoxContainer.show()
 		get_parent().get_node("HUD").hide()
 	else: 
 		$Options.hide()

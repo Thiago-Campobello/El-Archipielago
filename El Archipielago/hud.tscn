@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://8h6kx6tv5ayt"]
+
+[ext_resource type="Script" uid="uid://dr43p2pqeg0ja" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhrk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_frjqa"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2125666123]
+script = ExtResource("1_37p78")
+
+[node name="Vida" type="PanelContainer" parent="." unique_id=109715646]
+custom_minimum_size = Vector2(5, 5)
+offset_left = 421.0
+offset_top = 589.0
+offset_right = 768.0
+offset_bottom = 624.0
+
+[node name="Vida" type="Label" parent="Vida" unique_id=1293910423]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Municion" type="PanelContainer" parent="." unique_id=232134516]
+offset_left = 895.0
+offset_top = 523.0
+offset_right = 1112.0
+offset_bottom = 593.0
+
+[node name="Municion" type="Label" parent="Municion" unique_id=676649905]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.877616, 0.877616, 0.877616, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cargador" type="Label" parent="Municion/Municion" unique_id=979558444]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 16.0
+offset_right = 211.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.341568, 0.354494, 0.357725, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Margen" type="MarginContainer" parent="." unique_id=1356588139]
+custom_minimum_size = Vector2(64, 64)
+offset_left = -77.0
+offset_top = 438.0
+offset_right = 404.0
+offset_bottom = 638.0
+
+[node name="Container" type="BoxContainer" parent="Margen" unique_id=908171856]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Filas" type="VBoxContainer" parent="Margen/Container" unique_id=858319785]
+layout_mode = 2
+alignment = 1
+
+[node name="Columna1" type="HBoxContainer" parent="Margen/Container/Filas" unique_id=672990026]
+layout_mode = 2
+
+[node name="Vacío2" type="Panel" parent="Margen/Container/Filas/Columna1" unique_id=1384925574]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Vacío" type="Panel" parent="Margen/Container/Filas/Columna1" unique_id=454868774]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_frjqa")
+
+[node name="Slot1" type="Panel" parent="Margen/Container/Filas/Columna1" unique_id=1861587293]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N" type="Label" parent="Margen/Container/Filas/Columna1/Slot1" unique_id=1943978967]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 41.0
+offset_bottom = 26.0
+
+[node name="Obj" type="Label" parent="Margen/Container/Filas/Columna1/Slot1" unique_id=205080771]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 22.0
+offset_right = 51.0
+offset_bottom = 45.0
+
+[node name="Columna2" type="HBoxContainer" parent="Margen/Container/Filas" unique_id=355852369]
+layout_mode = 2
+
+[node name="Vacío2" type="Panel" parent="Margen/Container/Filas/Columna2" unique_id=1337699494]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot2" type="Panel" parent="Margen/Container/Filas/Columna2" unique_id=358376472]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N2" type="Label" parent="Margen/Container/Filas/Columna2/Slot2" unique_id=2034797060]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Obj2" type="Label" parent="Margen/Container/Filas/Columna2/Slot2" unique_id=614932879]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.0
+offset_right = 53.0
+offset_bottom = 45.0
+
+[node name="Vacío" type="Panel" parent="Margen/Container/Filas/Columna2" unique_id=1707627616]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Vacío3" type="Panel" parent="Margen/Container/Filas/Columna2/Vacío" unique_id=1228540206]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 0
+offset_left = -36.0
+offset_right = -4.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot3" type="Panel" parent="Margen/Container/Filas/Columna2" unique_id=780042835]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N3" type="Label" parent="Margen/Container/Filas/Columna2/Slot3" unique_id=310905747]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Obj3" type="Label" parent="Margen/Container/Filas/Columna2/Slot3" unique_id=744205939]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 22.0
+offset_right = 51.0
+offset_bottom = 45.0
+
+[node name="Columna3" type="HBoxContainer" parent="Margen/Container/Filas" unique_id=334392775]
+layout_mode = 2
+alignment = 1
+
+[node name="Slot4" type="Panel" parent="Margen/Container/Filas/Columna3" unique_id=1221180085]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N4" type="Label" parent="Margen/Container/Filas/Columna3/Slot4" unique_id=320207186]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Obj4" type="Label" parent="Margen/Container/Filas/Columna3/Slot4" unique_id=652609426]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 52.0
+offset_bottom = 47.0
+
+[node name="Vacío" type="Panel" parent="Margen/Container/Filas/Columna3" unique_id=1688075530]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot5" type="Panel" parent="Margen/Container/Filas/Columna3" unique_id=782083772]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N5" type="Label" parent="Margen/Container/Filas/Columna3/Slot5" unique_id=573459219]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Obj5" type="Label" parent="Margen/Container/Filas/Columna3/Slot5" unique_id=1234294395]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 23.0
+offset_right = 51.0
+offset_bottom = 46.0
+
+[node name="Vacío2" type="Panel" parent="Margen/Container/Filas/Columna3" unique_id=1557534868]
+custom_minimum_size = Vector2(32, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mhrk4")
+
+[node name="Slot6" type="Panel" parent="Margen/Container/Filas/Columna3" unique_id=1612723921]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="N6" type="Label" parent="Margen/Container/Filas/Columna3/Slot6" unique_id=1337997167]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Obj6" type="Label" parent="Margen/Container/Filas/Columna3/Slot6" unique_id=1919128371]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 24.0
+offset_right = 51.0
+offset_bottom = 47.0
