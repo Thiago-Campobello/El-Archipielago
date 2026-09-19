@@ -176,6 +176,23 @@ alignment = 0
 icon_alignment = 1
 vertical_icon_alignment = 2
 
+[node name="Fila_correr" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=852075711]
+layout_mode = 2
+theme_override_constants/separation = 291
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_correr" unique_id=602896353]
+layout_mode = 2
+text = "Correr"
+
+[node name="Correr" type="Button" parent="Opciones/ScrollContainer/Container/Fila_correr" unique_id=238170888]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
 [node name="Fila_apuntar" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=334553283]
 layout_mode = 2
 theme_override_constants/separation = 277
@@ -373,6 +390,7 @@ vertical_icon_alignment = 2
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_Atras/Atras" to="Opciones" method="_on_atras_pressed"]
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_derecha/Derecha" to="Opciones" method="_on_derecha_pressed"]
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_saltar/Saltar" to="Opciones" method="_on_saltar_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_correr/Correr" to="Opciones" method="_on_correr_pressed"]
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_apuntar/Apuntar" to="Opciones" method="_on_apuntar_pressed"]
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_disparar/Disparar" to="Opciones" method="_on_disparar_pressed"]
 [connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_recargar/Recargar" to="Opciones" method="_on_recargar_pressed"]

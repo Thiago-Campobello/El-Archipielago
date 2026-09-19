@@ -2,7 +2,7 @@ extends Control
 var boton_cambiando
 var control_cambiando
 var esperando_tecla=false
-var controles=["move_forward","move_left","move_backward","move_right","jump","apuntar","shoot","reload","alt_camara","desbq_mouse","1","2","3","4","5","6"]
+var controles=["move_forward","move_left","move_backward","move_right","jump","run","apuntar","shoot","reload","alt_camara","desbq_mouse","1","2","3","4","5","6"]
 func _on_salir_pressed() -> void:
 	get_parent().get_node("VBoxContainer").show()
 	hide()
@@ -92,21 +92,21 @@ func nombre_evento(evento):
 
 
 func _on_slot_4_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(13)
+	if not esperando_tecla:cambiar_tecla(14)
 func _on_slot_3_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(12)
+	if not esperando_tecla:cambiar_tecla(13)
 func _on_slot_2_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(11)
+	if not esperando_tecla:cambiar_tecla(12)
 func _on_slot_1_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(10)
+	if not esperando_tecla:cambiar_tecla(11)
 func _on_desblqm_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(9)
+	if not esperando_tecla:cambiar_tecla(10)
 func _on_alt_camara_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(8)
+	if not esperando_tecla:cambiar_tecla(9)
 func _on_recargar_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(7)
+	if not esperando_tecla:cambiar_tecla(8)
 func _on_disparar_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(6)
+	if not esperando_tecla:cambiar_tecla(7)
 func _on_atras_pressed() -> void:
 	if not esperando_tecla:cambiar_tecla(2)
 func _on_adelante_pressed() -> void:
@@ -118,8 +118,10 @@ func _on_izquierda_pressed() -> void:
 func _on_saltar_pressed() -> void:
 	if not esperando_tecla:cambiar_tecla(4)
 func _on_apuntar_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(5)
+	if not esperando_tecla:cambiar_tecla(6)
 func _on_slot_5_pressed() -> void:
-	if not esperando_tecla:cambiar_tecla(14)
-func _on_slot_6_pressed() -> void:
 	if not esperando_tecla:cambiar_tecla(15)
+func _on_slot_6_pressed() -> void:
+	if not esperando_tecla:cambiar_tecla(16)
+func _on_correr_pressed() -> void:
+	if not esperando_tecla:cambiar_tecla(5)
