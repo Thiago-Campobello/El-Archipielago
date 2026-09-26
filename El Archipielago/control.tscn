@@ -346,19 +346,19 @@ alignment = 0
 icon_alignment = 1
 vertical_icon_alignment = 2
 
-[node name="Fila_slot5" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=992425441]
+[node name="Fila_slot5" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=2038055208]
 layout_mode = 2
 theme_override_constants/separation = 200
 
-[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=1796926498]
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=2036878160]
 layout_mode = 2
-text = "Atajo rapido slot 5
-"
+text = "Atajo rapido slot 5"
 
-[node name="Slot5" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=175530708]
+[node name="Slot5" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=763174903]
 custom_minimum_size = Vector2(60, 25)
 layout_mode = 2
 localize_numeral_system = false
+theme_override_constants/h_separation = 4
 alignment = 0
 icon_alignment = 1
 vertical_icon_alignment = 2

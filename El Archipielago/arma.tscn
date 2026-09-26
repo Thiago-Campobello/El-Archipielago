@@ -1,23 +1,21 @@
 [gd_scene format=3 uid="uid://st16hn3g0eq8"]
 
 [ext_resource type="Script" uid="uid://urb0kbsiqwc8" path="res://arma.gd" id="1_uya3a"]
-[ext_resource type="PackedScene" uid="uid://b7j8rwm7nt3si" path="res://arma.gltf" id="1_vp40w"]
+[ext_resource type="PackedScene" uid="uid://b012rnsqt41rd" path="res://Meshes/mesh_pistola.tscn" id="2_bftl6"]
 [ext_resource type="Script" uid="uid://76ickjbiy4fr" path="res://fire_cooldown.gd" id="3_bftl6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_reb6k"]
-size = Vector3(0.23217773, 0.41015625, 0.7767334)
+size = Vector3(0.23217773, 0.47180176, 0.78012085)
 
 [node name="Arma" type="Node3D" unique_id=1622712851]
 script = ExtResource("1_uya3a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=86039027]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0045166016, 0.20703125, -0.26885986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0045166016, 0.237854, -0.25559998)
 shape = SubResource("BoxShape3D_reb6k")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=494749500]
-
-[node name="blockbench_export" parent="MeshInstance3D" unique_id=1630445702 instance=ExtResource("1_vp40w")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+[node name="Mesh_pistola" parent="." unique_id=14922012 instance=ExtResource("2_bftl6")]
+transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0, 0.057, -0.195)
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=412008135]
 transform = Transform3D(2, 0, 0, 0, -1.0927847e-06, -2, 0, 25, -8.742278e-08, -6.376207e-05, 0.3427106, -0.6310843)

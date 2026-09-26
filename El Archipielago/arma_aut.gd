@@ -16,15 +16,6 @@ func _ready() -> void:
 
 func _on_slot_cambiado(nombre_arma: String) -> void:
 	hide()
-
-		
-	match nombre_arma:
-		"PISTOLA":
-			var pistola = get_node_or_null("Pistola3D")
-			if pistola: pistola.show()
-		"SUBFUSIL":
-			var subfusil = get_node_or_null("Subfusil3D")
-			if subfusil: subfusil.show()
 	match nombre_arma:
 		"PISTOLA":
 			var pistola =get_parent().get_node_or_null("Arma")
@@ -32,27 +23,35 @@ func _on_slot_cambiado(nombre_arma: String) -> void:
 		"SUBFUSIL":
 			var subfusil =get_parent().get_node_or_null("Arma_aut")
 			if subfusil: subfusil.show()
-func _process(delta):
-	if Input.is_action_pressed("shoot"):
-		if visible:
-			shoot()
-	position = position.lerp(posicion_original, 10.0 * delta)
-	if Input.is_action_just_pressed("reload"):
-			if balas<balasmax:
-				var a=balasmax-balas
-				if cargador>a && cargador>0:
-					balas+=a
-					cargador-=a
-				elif cargador>0:
-					balas+=cargador
-					cargador=0
 			hud.actualizar_balas(balas,balasmax,cargador)
+func _process(delta):
+	if visible:
+		var camara_actual = get_viewport().get_camera_3d()
+		var centro = get_viewport().get_visible_rect().size / 2
+		var origen = camara_actual.project_ray_origin(centro)
+		var direccion = camara_actual.project_ray_normal(centro)
+		var punto_objetivo = origen + direccion * 1000.0
+		$RayCast3D.target_position = $RayCast3D.to_local(punto_objetivo)
+		$RayCast3D.force_raycast_update()
+		if Input.is_action_pressed("shoot"):
+				shoot()
+		position = position.lerp(posicion_original, 10.0 * delta)
+		if Input.is_action_just_pressed("reload"):
+				if balas<balasmax:
+					var a=balasmax-balas
+					if cargador>a && cargador>0:
+						balas+=a
+						cargador-=a
+					elif cargador>0:
+						balas+=cargador
+						cargador=0
+				hud.actualizar_balas(balas,balasmax,cargador)
 func shoot():
 	if !$FireCooldown.is_stopped():
 		return
 	var mult=1
-	if Input.is_action_pressed("apuntar") && get_viewport().get_camera_3d()==get_parent():
-		position.z += 0.05
+	if Input.is_action_pressed("apuntar") && get_viewport().get_camera_3d()==get_parent().get_parent():
+		position.z += 0.03
 	else:
 		position.z += 0.2
 	if balas>0:

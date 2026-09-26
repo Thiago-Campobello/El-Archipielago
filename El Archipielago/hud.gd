@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal slot_cambiado(nombre_arma)
-
+var cambio=false
 var inventario_slots = {
 	1: {"nombre": "PUÑOS", "conseguido": false},
 	2: {"nombre": "PISTOLA", "conseguido": true},
@@ -13,9 +13,9 @@ var inventario_slots = {
 
 var slot_seleccionado = 2
 @onready var contenedor_slots = $Margen/Container/Filas
-
 func _ready() -> void:
-	# Forzamos a que el script siempre procese las teclas
+	get_parent().get_node("Player").connect("p1",_p1)
+	get_parent().get_node("Player").connect("p3",_p3)
 	set_process_input(true)
 	
 	# Desactivamos el foco de todos los slots para que no se roben el teclado
@@ -26,7 +26,23 @@ func _ready() -> void:
 			
 	actualizar_nombres_inventario()
 	resaltar_slot_elegido()
-
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("apuntar"):
+		$Bloom.texture=preload("res://IMGS/Bloom/02_moving_in.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/03_closer.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/04_nearly_aimed.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/05_ads.png")
+	if Input.is_action_just_released("apuntar"):
+		$Bloom.texture=preload("res://IMGS/Bloom/04_nearly_aimed.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/03_closer.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/02_moving_in.png")
+		await get_tree().create_timer(0.05).timeout
+		$Bloom.texture=preload("res://IMGS/Bloom/01_hipfire.png")
 func _input(_event: InputEvent) -> void:
 	# Detección directa y forzada por mapa de entrada sin importar el foco
 	if Input.is_action_just_pressed("1"):
@@ -93,3 +109,29 @@ func actualizar_balas(balas, maxx, cargador):
 
 func actualizar_vida(vida, vidamax):
 	$Vida/Vida.text = str(vida) + " / " + str(vidamax)
+func quitar_arma_inventario(nombre_arma: String):
+	for i in inventario_slots:
+		if inventario_slots[i]["nombre"] == nombre_arma:
+			inventario_slots[i]["conseguido"] = false
+			actualizar_nombres_inventario()
+			if slot_seleccionado == i:
+				slot_cambiado.emit("")
+			break
+
+func agregar_arma_inventario(nombre_arma: String):
+	for i in inventario_slots:
+		if inventario_slots[i]["nombre"] == nombre_arma:
+			inventario_slots[i]["conseguido"] = true
+			actualizar_nombres_inventario()
+			break
+func mostrar_mensaje_interactuar(texto: String):
+	if has_node("CartelInteractuar"):
+		$CartelInteractuar.text = texto
+		$CartelInteractuar.visible = true
+func _p1():
+	get_node("Bloom").show()
+func _p3():
+	get_node("Bloom").hide()
+func ocultar_mensaje_interactuar():
+	if has_node("CartelInteractuar"):
+		$CartelInteractuar.visible = false

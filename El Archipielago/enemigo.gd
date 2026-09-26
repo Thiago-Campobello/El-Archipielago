@@ -106,7 +106,6 @@ func take_damage(daño):
 		vida = 0
 		morir()
 	$SubViewport/ProgressBar.value = vida
-	print("Vida: ",vida," Daño: ",daño)
 
 func morir():
 	muerto = true
@@ -131,8 +130,6 @@ func atacar_jugador(direccion_hacia_jugador: Vector3):
 	elif jugador.has_method("take_damage"):
 		jugador.take_damage(daño_hacha)
 		
-	print("¡El enemigo te ha golpeado con el hacha! Daño: ", daño_hacha)
-	
 	await get_tree().create_timer(0.2).timeout
 	en_impulso = false
 	

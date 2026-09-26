@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cxb6opyf727ie"]
+
+[ext_resource type="Script" uid="uid://ctecp8no43xt" path="res://subfusil_fisica.gd" id="1_ot76j"]
+[ext_resource type="PackedScene" uid="uid://dq8oga6q61s2d" path="res://arma_aut.tscn" id="2_n6fow"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxr5p"]
+size = Vector3(0.9183777, 1.1616538, 3.1303139)
+
+[node name="SubfusilFisica" type="RigidBody3D" unique_id=822464378]
+script = ExtResource("1_ot76j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1810522293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037604272, -0.012482405, -0.015532374)
+shape = SubResource("BoxShape3D_cxr5p")
+
+[node name="Arma_aut" parent="." unique_id=281232732 instance=ExtResource("2_n6fow")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=636118206]

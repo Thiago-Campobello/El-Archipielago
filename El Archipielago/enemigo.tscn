@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bvqohhftehom2"]
 
 [ext_resource type="Script" uid="uid://cts1uxq1uawe6" path="res://enemigo.gd" id="1_becj5"]
-[ext_resource type="PackedScene" uid="uid://cjyckkx411ju3" path="res://2_martillo.tscn" id="2_moxti"]
-[ext_resource type="PackedScene" uid="uid://g2pw841ymhvo" path="res://Enemigo.glb" id="3_moxti"]
+[ext_resource type="PackedScene" uid="uid://cjyckkx411ju3" path="res://martillo.tscn" id="2_moxti"]
+[ext_resource type="PackedScene" uid="uid://cqn28j0vq7fl7" path="res://Meshes/mesh_enemigo.tscn" id="3_moxti"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j8qs0"]
-size = Vector3(1, 0.870361, 0.368225)
+size = Vector3(0.5953369, 0.7253112, 0.47101593)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bnx68"]
-size = Vector3(1, 1, 0.592804)
+size = Vector3(0.84277344, 1.0043945, 0.592804)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cjdqc"]
-size = Vector3(1, 1, 0.589539)
+size = Vector3(0.86657715, 1.0166016, 0.589539)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_kcw23"]
 viewport_path = NodePath("SubViewport")
@@ -23,38 +23,24 @@ nodo_hacha = NodePath("martillo")
 [node name="Cabeza" type="Area3D" parent="." unique_id=837152425]
 
 [node name="Cabeza" type="CollisionShape3D" parent="Cabeza" unique_id=1743979272]
-transform = Transform3D(1, 0, 0, 0, 0.75, 0, 0, 0, 1, 0, 1.59607, 0)
+transform = Transform3D(1, 0, 0, 0, 0.75, 0, 0, 0, 1, -0.0119018555, 1.7779738, -0.012050614)
 shape = SubResource("BoxShape3D_j8qs0")
 
 [node name="Cuerpo" type="Area3D" parent="." unique_id=961706617]
 
 [node name="Cuerpo" type="CollisionShape3D" parent="Cuerpo" unique_id=76494147]
-transform = Transform3D(1, 0, 0, 0, 1.25, 0, 0, 0, 1, 0, 0.649735, 0)
+transform = Transform3D(1, 0, 0, 0, 1.25, 0, 0, 0, 1, 0.020996094, 0.6469884, 0)
 shape = SubResource("BoxShape3D_bnx68")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=566832390]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0.993077, 0)
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0.02520752, 1.0370224, 0)
 shape = SubResource("BoxShape3D_cjdqc")
 
 [node name="martillo" parent="." unique_id=607977867 instance=ExtResource("2_moxti")]
 transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, 0.2720319, 1.5740083, -0.4105357)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=194797954]
+[node name="Mesh_enemigo" parent="." unique_id=614135641 instance=ExtResource("3_moxti")]
 transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0.4, 0, 0, 0)
-
-[node name="Enemigo" parent="MeshInstance3D" unique_id=1796681834 instance=ExtResource("3_moxti")]
-
-[node name="Brazo_Superior_Izq" parent="MeshInstance3D/Enemigo" index="25" unique_id=1118428920]
-transform = Transform3D(1, 2.316377e-08, 3.1246046e-09, -2.3163771e-08, 0.9642587, 0.26496264, 3.1245904e-09, -0.26496264, 0.9642587, -0.7599999, 3.007388, 0.09661227)
-
-[node name="Codo_Izq" parent="MeshInstance3D/Enemigo" index="26" unique_id=48661248]
-transform = Transform3D(1, 2.316377e-08, 3.1246046e-09, -2.3163771e-08, 0.9642587, 0.26496264, 3.1245904e-09, -0.26496264, 0.9642587, -0.7599999, 2.6216846, 0.2025974)
-
-[node name="Antebrazo_Izq" parent="MeshInstance3D/Enemigo" index="27" unique_id=56300721]
-transform = Transform3D(1, 8.7418144e-08, 8.8322054e-08, -8.741816e-08, -0.010286514, 0.99994713, 8.832204e-08, -0.99994713, -0.010286514, -0.76000005, 2.6371193, 0.57357055)
-
-[node name="Mano_Izq" parent="MeshInstance3D/Enemigo" index="28" unique_id=305529019]
-transform = Transform3D(1, 8.7418144e-08, 8.8322054e-08, -8.741816e-08, -0.010286514, 0.99994713, 8.832204e-08, -0.99994713, -0.010286514, -0.76000005, 2.6407194, 0.92355186)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=986187841]
 
@@ -74,5 +60,3 @@ value = 100.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2458, 0)
 billboard = 1
 texture = SubResource("ViewportTexture_kcw23")
-
-[editable path="MeshInstance3D/Enemigo"]

@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.6-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.7-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
@@ -43,6 +43,7 @@
 | **Alpha v1.4** | 10/09/2026 | 🟡 Desarrollo | Mejoras en el enemigo y arma    |
 | **Alpha v1.5** | 16/09/2026 | 🟡 Desarrollo | Intensificación en el hud y mapa    |
 | **Alpha v1.6** | 19/09/2026 | 🟡 Desarrollo | Se añade inventario al hud, correr y menu opciones   |
+| **Alpha v1.7** | 26/09/2026 | 🟡 Desarrollo | Logos, bloom, dropear y agarrar objetos  |
 
 ## 📝 Changelog
 
@@ -73,12 +74,16 @@ Se agrega un mapa de prueba como base de isla, se añade 3ra persona, se añade 
 Se agregó un sistema de inventario, con aplicacion en el hud, ademas de que se movieron un par de cosas del mismo para mejor visibilidad, se añade el input y funcion para correr, un menu de opciones de controles en la pausa, el cual es funcional, solo le falta que se marquen los conflictos de tecla, si es que otra tecla está usando la misma
 
 **Fecha:** 19/09/2026
+### 🟡 Alpha v1.7
+Se arreglaron bugs, se añadieron logos en el hud para mas decoracion, bloom (puntero de disparo) el cual fue programado para que solo aparezca en primera persona, en cuanto a que el arma apunte exactamente a donde esté el puntero, esta es calculada en todo momento y se modifica la posicion del lugar objetivo del raycast cada vez, para que este siempre esté apuntando al bloom. Se hizo un sistema el cual hace que puedas tirar armas al piso, con un mensaje de interactuar cuando apuntas a una arma en el piso, por ahora con algunos bugs
+
+**Fecha:** 26/09/2026
 ## 📊 Estado del proyecto
 
-**Versión actual:** `Alpha v1.6`
+**Versión actual:** `Alpha v1.7`
 
 ```text
-██░░░░░░░░░░░░░░░░░░ 13%
+███░░░░░░░░░░░░░░░░░ 16%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.

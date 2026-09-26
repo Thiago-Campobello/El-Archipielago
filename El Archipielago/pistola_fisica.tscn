@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bsoqdt8k5lrk3"]
+
+[ext_resource type="Script" uid="uid://c1l70fieud1y6" path="res://pistola_fisica.gd" id="1_eib3b"]
+[ext_resource type="PackedScene" uid="uid://st16hn3g0eq8" path="res://arma.tscn" id="2_4t4mb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxr5p"]
+size = Vector3(0.4528076, 0.44264373, 1.265686)
+
+[node name="PistolaFisica" type="RigidBody3D" unique_id=822464378]
+script = ExtResource("1_eib3b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1810522293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037403077, 0.18320204, -0.12145686)
+shape = SubResource("BoxShape3D_cxr5p")
+
+[node name="Arma" parent="." unique_id=1622712851 instance=ExtResource("2_4t4mb")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=636118206]

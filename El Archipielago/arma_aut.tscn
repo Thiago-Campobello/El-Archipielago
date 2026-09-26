@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dq8oga6q61s2d"]
 
 [ext_resource type="Script" uid="uid://buigkhyta4g7i" path="res://arma_aut.gd" id="1_lfuuu"]
-[ext_resource type="PackedScene" uid="uid://d2esrqf4x1qb2" path="res://ametralladora.glb" id="2_s2mh5"]
+[ext_resource type="PackedScene" uid="uid://b26mdfrm8kxga" path="res://Meshes/mesh_arma_aut.tscn" id="2_s2mh5"]
 [ext_resource type="Script" uid="uid://76ickjbiy4fr" path="res://fire_cooldown.gd" id="3_op3um"]
 
 [node name="Arma_aut" type="Node3D" unique_id=281232732]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_lfuuu")
 
-[node name="ametralladora" parent="." unique_id=846999746 instance=ExtResource("2_s2mh5")]
-transform = Transform3D(-4.371139e-08, 0, 0.7, 0, 1, 0, -1, 0, -3.059797e-08, 0, 0, 0)
+[node name="Mesh_Arma_aut" parent="." unique_id=423687994 instance=ExtResource("2_s2mh5")]
+transform = Transform3D(-4.6814897e-08, 0, 0.75, 0, 1.071, 0, -1.071, 0, -3.278354e-08, 0, 0, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=674927334]
 transform = Transform3D(2, 0, 0, 0, -1.09278e-06, -2, 0, 25, -8.74228e-08, -0.00137623, -0.0212709, -3.22955)

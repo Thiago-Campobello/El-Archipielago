@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ce24vnsw4cnp5"]
+
+[ext_resource type="PackedScene" uid="uid://gmxi4oc8qvtx" path="res://Mesh_granada.tscn" id="1_4d17a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frjqa"]
+size = Vector3(0.32984924, 0.43215942, 0.33337402)
+
+[node name="Granada" type="Node3D" unique_id=336800003]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=854815117]
+
+[node name="Mesh_granada" parent="MeshInstance3D" unique_id=567849604 instance=ExtResource("1_4d17a")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=333831223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002408713, 0.04374695, -0.0051879883)
+shape = SubResource("BoxShape3D_frjqa")
