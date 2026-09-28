@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.7-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.8-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
@@ -44,6 +44,7 @@
 | **Alpha v1.5** | 16/09/2026 | 🟡 Desarrollo | Intensificación en el hud y mapa    |
 | **Alpha v1.6** | 19/09/2026 | 🟡 Desarrollo | Se añade inventario al hud, correr y menu opciones   |
 | **Alpha v1.7** | 26/09/2026 | 🟡 Desarrollo | Logos, bloom, dropear y agarrar objetos  |
+| **Alpha v1.8** | 27/09/2026 | 🟡 Desarrollo | Isla,Terrain3D,  |
 
 ## 📝 Changelog
 
@@ -78,12 +79,16 @@ Se agregó un sistema de inventario, con aplicacion en el hud, ademas de que se 
 Se arreglaron bugs, se añadieron logos en el hud para mas decoracion, bloom (puntero de disparo) el cual fue programado para que solo aparezca en primera persona, en cuanto a que el arma apunte exactamente a donde esté el puntero, esta es calculada en todo momento y se modifica la posicion del lugar objetivo del raycast cada vez, para que este siempre esté apuntando al bloom. Se hizo un sistema el cual hace que puedas tirar armas al piso, con un mensaje de interactuar cuando apuntas a una arma en el piso, por ahora con algunos bugs
 
 **Fecha:** 26/09/2026
+### 🟡 Alpha v1.8
+Se agrega el addon Terrain3D de godot para poder diseñar el terreno de la isla, se añadieron 3 texturas, una para el pasto, otra para las rocas y otra para la arena se hizo la base principal de la isla, la cual puede terminar teniendo mas o menos altura en algunos lados, pero esto sería la base principal, se añadió un mesh para el agua, con reflección y un efecto de transparencia y se arreglaron algunos bugs lumínicos con el terreno
+
+**Fecha:** 27/09/2026
 ## 📊 Estado del proyecto
 
-**Versión actual:** `Alpha v1.7`
+**Versión actual:** `Alpha v1.8`
 
 ```text
-███░░░░░░░░░░░░░░░░░ 16%
+████░░░░░░░░░░░░░░░░ 22%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.
