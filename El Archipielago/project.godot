@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="El archipielago"
-run/main_scene="uid://b67ef3fm7bw5g"
+run/main_scene="uid://dv45hqs1of3ef"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

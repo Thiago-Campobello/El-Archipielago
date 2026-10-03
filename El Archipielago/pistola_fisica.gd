@@ -7,7 +7,13 @@ func interactuar(player):
 	if arma_mano:
 		arma_mano.visible = true
 		if player.hud:
-			player.hud.inventario_slots[2]["conseguido"] = true
+			player.hud.conseguidos[1] = true
 			player.hud.actualizar_nombres_inventario()
-			player.hud.actualizar_balas(arma_mano.balas, arma_mano.balasmax, arma_mano.cargador)
+			player.hud.cambiar_de_slot(1)
 	queue_free()
+func configurar_desde_arma(arma: Node3D) -> void:
+	for hijo in arma.get_children():
+		if hijo is MultiMeshInstance3D:
+			add_child(hijo.duplicate())
+		elif hijo is CollisionShape3D:
+			add_child(hijo.duplicate())

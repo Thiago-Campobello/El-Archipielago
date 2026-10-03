@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://st16hn3g0eq8" path="res://arma.tscn" id="3_kne1u"]
 [ext_resource type="PackedScene" uid="uid://b4y1mecv4aiuf" path="res://Meshes/Mesh_player.tscn" id="3_tdg3f"]
 [ext_resource type="PackedScene" uid="uid://ce24vnsw4cnp5" path="res://granada.tscn" id="5_cxr5p"]
+[ext_resource type="Script" uid="uid://bf5c7gsrxjpos" path="res://granada.gd" id="7_dtqjt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lb7mg"]
 
@@ -25,8 +26,10 @@ transform = Transform3D(-0.35, 0, -5.284853e-08, 0, 0.35, 0, 5.284853e-08, 0, -0
 
 [node name="Camara1p" type="Camera3D" parent="Camara" unique_id=185949244]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552808, 0)
+current = true
 
 [node name="Slot1" type="Node3D" parent="Camara/Camara1p" unique_id=1702474004]
+visible = false
 
 [node name="Slot2" type="Node3D" parent="Camara/Camara1p" unique_id=1617080069]
 
@@ -34,20 +37,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552808, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45183453, -0.54838383, -0.3994929)
 
 [node name="Slot3" type="Node3D" parent="Camara/Camara1p" unique_id=1979769510]
-
-[node name="Arma_aut" parent="Camara/Camara1p/Slot3" unique_id=1980526449 instance=ExtResource("3_e80uo")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.372982, -0.269764, -0.87356496)
 visible = false
 
+[node name="Arma" parent="Camara/Camara1p/Slot3" unique_id=1980526449 instance=ExtResource("3_e80uo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.372982, -0.269764, -0.84001756)
+
 [node name="Slot4" type="Node3D" parent="Camara/Camara1p" unique_id=1252441871]
+visible = false
 
 [node name="Slot5" type="Node3D" parent="Camara/Camara1p" unique_id=619632589]
+visible = false
 
 [node name="Granada" parent="Camara/Camara1p/Slot5" unique_id=336800003 instance=ExtResource("5_cxr5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60533863, -0.5449357, -0.87418437)
-visible = false
+script = ExtResource("7_dtqjt")
 
 [node name="Slot6" type="Node3D" parent="Camara/Camara1p" unique_id=1166115172]
+visible = false
 
 [node name="RayCast3D" type="RayCast3D" parent="Camara/Camara1p" unique_id=1043710267]
 transform = Transform3D(1, 0, 0, 0, -1.0927847e-06, -1, 0, 25, -4.371139e-08, 0, 0, 0)

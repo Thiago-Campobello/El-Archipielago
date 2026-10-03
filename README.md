@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.8-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.9-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
@@ -45,6 +45,7 @@
 | **Alpha v1.6** | 19/09/2026 | 🟡 Desarrollo | Se añade inventario al hud, correr y menu opciones   |
 | **Alpha v1.7** | 26/09/2026 | 🟡 Desarrollo | Logos, bloom, dropear y agarrar objetos  |
 | **Alpha v1.8** | 27/09/2026 | 🟡 Desarrollo | Isla,Terrain3D,  |
+| **Alpha v1.9** | 27/09/2026 | 🟡 Desarrollo | Menu, reestructuracion de código y de carpetas  |
 
 ## 📝 Changelog
 
@@ -83,12 +84,16 @@ Se arreglaron bugs, se añadieron logos en el hud para mas decoracion, bloom (pu
 Se agrega el addon Terrain3D de godot para poder diseñar el terreno de la isla, se añadieron 3 texturas, una para el pasto, otra para las rocas y otra para la arena se hizo la base principal de la isla, la cual puede terminar teniendo mas o menos altura en algunos lados, pero esto sería la base principal, se añadió un mesh para el agua, con reflección y un efecto de transparencia y se arreglaron algunos bugs lumínicos con el terreno
 
 **Fecha:** 27/09/2026
+### 🟡 Alpha v1.9
+Se agregó un menu principal antes de iniciar el juego, con un apartado con una instruccion a la historia, se reestructuraron códigos tanto del personaje, camara, hud, armas e sistema de inventario para evitar posibles bugs, que este sea mas entendible y ordenado y ademas que sea más general, no depender de una variable que en el futuro pueda cambiar para que los posibles cambios a futuro sean mas simples como por ejemplo para los distintos tipos de armas, si las tirarías al piso, habrían que hacer una escena de cada uno en el piso con su código, a partir de la módificacion en el código de las armas del suelo, esto ya no es necesario, este código se volvió general, toma tanto la colisión como el mesh del arma que fue tirada y no un mesh o colisión predeterminada
+
+**Fecha:** 3/10/2026
 ## 📊 Estado del proyecto
 
-**Versión actual:** `Alpha v1.8`
+**Versión actual:** `Alpha v1.9`
 
 ```text
-████░░░░░░░░░░░░░░░░ 22%
+█████░░░░░░░░░░░░░░░ 27%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.

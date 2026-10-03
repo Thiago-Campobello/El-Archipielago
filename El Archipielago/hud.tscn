@@ -32,6 +32,12 @@ offset_top = 523.0
 offset_right = 1112.0
 offset_bottom = 593.0
 
+[node name="LogoBalas" type="TextureRect" parent="Municion" unique_id=1257630039]
+custom_maximum_size = Vector2(67, 68)
+layout_mode = 2
+texture = ExtResource("4_rftc2")
+expand_mode = 1
+
 [node name="Municion" type="Label" parent="Municion" unique_id=1546570930]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.877616, 0.877616, 0.877616, 1)
@@ -308,14 +314,6 @@ offset_bottom = 582.824
 texture = ExtResource("3_1xsix")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="LogoBalas" type="TextureRect" parent="." unique_id=1257630039]
-offset_left = 891.0
-offset_top = 524.0
-offset_right = 958.0
-offset_bottom = 592.0
-texture = ExtResource("4_rftc2")
-expand_mode = 1
 
 [node name="CartelInteractuar" type="Label" parent="." unique_id=481351009]
 visible = false

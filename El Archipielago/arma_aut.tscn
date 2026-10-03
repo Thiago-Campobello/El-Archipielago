@@ -1,20 +1,24 @@
 [gd_scene format=3 uid="uid://dq8oga6q61s2d"]
 
 [ext_resource type="Script" uid="uid://buigkhyta4g7i" path="res://arma_aut.gd" id="1_lfuuu"]
-[ext_resource type="PackedScene" uid="uid://b26mdfrm8kxga" path="res://Meshes/mesh_arma_aut.tscn" id="2_s2mh5"]
+[ext_resource type="PackedScene" uid="uid://pbm0gax5qrl2" path="res://Meshes/mesh_arma_aut.tscn" id="2_s2mh5"]
 [ext_resource type="Script" uid="uid://76ickjbiy4fr" path="res://fire_cooldown.gd" id="3_op3um"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mhrk4"]
+size = Vector3(0.39819336, 1.8571777, 4.9125824)
+
 [node name="Arma_aut" type="Node3D" unique_id=281232732]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_lfuuu")
 
 [node name="Mesh_Arma_aut" parent="." unique_id=423687994 instance=ExtResource("2_s2mh5")]
-transform = Transform3D(-4.6814897e-08, 0, 0.75, 0, 1.071, 0, -1.071, 0, -3.278354e-08, 0, 0, 0)
+transform = Transform3D(-1.7484556e-08, 0, 0.28, 0, 0.4, 0, -0.4, 0, -1.2239188e-08, 0, 0, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=674927334]
-transform = Transform3D(2, 0, 0, 0, -1.09278e-06, -2, 0, 25, -8.74228e-08, -0.00137623, -0.0212709, -3.22955)
+transform = Transform3D(2, 0, 0, 0, -1.09278e-06, -2, 0, 25, -8.74228e-08, -0.00137623, -0.0212709, -1.2902238)
 collide_with_areas = true
 collide_with_bodies = false
+debug_shape_custom_color = Color(0, 0, 0.7411765, 1)
+debug_shape_thickness = 5
 
 [node name="FireCooldown" type="Timer" parent="." unique_id=789834359]
 wait_time = 0.2
@@ -22,4 +26,8 @@ one_shot = true
 script = ExtResource("3_op3um")
 
 [node name="Muzzle" type="Marker3D" parent="." unique_id=1896471149]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00908828, -0.026537, -3.2098)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00908828, -0.026537, -1.270474)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1168352511]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.025756836, -0.012084961, -0.10019684)
+shape = SubResource("BoxShape3D_mhrk4")
