@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://nk0laxkebybo"]
+
+[ext_resource type="Script" uid="uid://bs315s6014qnc" path="res://scenes/intro_narrativa.gd" id="1_two1y"]
+[ext_resource type="Texture2D" uid="uid://bfl3fd0njdb66" path="res://IMGS/Fondos/DIAPOSITIVA1.IMAGEN DE HISTORIA.jpg" id="2_7lh07"]
+[ext_resource type="Texture2D" uid="uid://dkj2rkb4f8bfh" path="res://IMGS/Fondos/DIAPOSITIVA2.IMAGEN DE HISTORIA.jpg" id="3_q0hb8"]
+[ext_resource type="Texture2D" uid="uid://b1u8t8o5b5sai" path="res://IMGS/Fondos/DIAPOSITIVA3.IMAGEN DE HISTORIA}.jpg" id="4_n25fe"]
+[ext_resource type="Texture2D" uid="uid://du5rxwqvp705k" path="res://IMGS/Fondos/DIAPOSITIVA4.IMAGEN DE HISTORIA.jpg" id="5_gh25a"]
+[ext_resource type="Texture2D" uid="uid://b2olggm5k1mwc" path="res://IMGS/Fondos/DIAPOSITIVA5.IMAGEN DE HISTORIA.jpg.import.jpg" id="6_1r66w"]
+[ext_resource type="Texture2D" uid="uid://3o4410tefc2g" path="res://IMGS/Fondos/DIAPOSITIVA6.IMAGEN DE HISTORIA.jpg" id="7_oq3xe"]
+[ext_resource type="Texture2D" uid="uid://84dx3w2kwhqx" path="res://IMGS/Fondos/DIAPOSITIVA7.IMAGEN DE HISTORIA.jpg" id="8_6uvit"]
+[ext_resource type="Texture2D" uid="uid://bd1m7cmoe0c5s" path="res://IMGS/Fondos/DIAPOSITIVA8.IMAGEN DE HISTORIA.jpg.import.jpg" id="9_0rsaq"]
+[ext_resource type="Texture2D" uid="uid://b2s77gqo0gckk" path="res://IMGS/Fondos/isla.imagen.menu.principal.jpg" id="10_7lh07"]
+
+[node name="IntroNarrativa" type="Control" unique_id=965537396]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_two1y")
+imagenes_historia = Array[Texture2D]([ExtResource("2_7lh07"), ExtResource("3_q0hb8"), ExtResource("4_n25fe"), ExtResource("5_gh25a"), ExtResource("6_1r66w"), ExtResource("7_oq3xe"), ExtResource("8_6uvit"), ExtResource("9_0rsaq")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1426027410]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 647.53796
+scale = Vector2(1.0026053, 1.0007135)
+texture = ExtResource("10_7lh07")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Panel" type="Panel" parent="." unique_id=2132425371]
+top_level = true
+layout_mode = 0
+offset_left = 214.0
+offset_top = 476.0
+offset_right = 923.0
+offset_bottom = 565.0
+
+[node name="TituloHistoria" type="Label" parent="Panel" unique_id=181711042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 19.0
+offset_right = -20.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8132577, 0.8132577, 0.81325763, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.54901963)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonSiguiente" type="Button" parent="." unique_id=1823674218]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 967.0
+offset_top = 572.0
+offset_right = 1101.0
+offset_bottom = 614.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "SIGUIENTE"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="BotonSaltar" type="Button" parent="." unique_id=1156701438]
+layout_mode = 1
+offset_left = 984.0
+offset_top = 521.0
+offset_right = 1079.0
+offset_bottom = 563.0
+theme_override_font_sizes/font_size = 24
+text = "SALTAR"

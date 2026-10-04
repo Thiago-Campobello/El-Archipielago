@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://b67ef3fm7bw5g"]
 
-[ext_resource type="Script" uid="uid://baibn3obg4lgp" path="res://pause.gd" id="1_2eybh"]
-[ext_resource type="PackedScene" uid="uid://dac7pb2gxnadg" path="res://control.tscn" id="1_2gltf"]
-[ext_resource type="Terrain3DAssets" uid="uid://6elatxef0to4" path="res://Isla/new_terrain_3d_assets.tres" id="1_5i6jr"]
-[ext_resource type="PackedScene" uid="uid://xnatc63pt34x" path="res://Player.tscn" id="2_av43g"]
-[ext_resource type="PackedScene" uid="uid://8h6kx6tv5ayt" path="res://hud.tscn" id="3_soi3k"]
+[ext_resource type="Texture2D" uid="uid://dhjxlq6d8m2lv" path="res://textures/grass/packed_albedo_height.png" id="1_t52m3"]
+[ext_resource type="Texture2D" uid="uid://ddfyymkwtulmv" path="res://textures/grass/packed_normal_roughness.png" id="2_e7mj8"]
+[ext_resource type="Texture2D" uid="uid://dgkrl86gt83hw" path="res://textures/rocks/packed_albedo_height.png" id="3_ovmss"]
+[ext_resource type="Texture2D" uid="uid://cpnj4kk4fvg30" path="res://textures/rocks/packed_normal_roughness.png" id="4_8dy76"]
+[ext_resource type="Texture2D" uid="uid://dvoin0bw68vov" path="res://textures/sand/packed_albedo_height.png" id="5_k1khn"]
+[ext_resource type="Texture2D" uid="uid://m5hdsohpk05l" path="res://textures/sand/packed_normal_roughness.png" id="6_pbnjl"]
+[ext_resource type="PackedScene" uid="uid://xnatc63pt34x" path="res://Player.tscn" id="7_hr368"]
+[ext_resource type="PackedScene" uid="uid://8h6kx6tv5ayt" path="res://hud.tscn" id="8_skv4x"]
+[ext_resource type="Script" uid="uid://baibn3obg4lgp" path="res://pause.gd" id="9_hpyjq"]
+[ext_resource type="PackedScene" uid="uid://dac7pb2gxnadg" path="res://control.tscn" id="10_8rnj8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o53tk"]
 sky_top_color = Color(0.368348, 0.489749, 0.652705, 1)
@@ -639,6 +644,45 @@ world_background = 0
 auto_shader = true
 shader_override = SubResource("Shader_n4c0l")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akin3"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_sh2qa"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_akin3")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_fhoe0"]
+name = "packed_albedo_height"
+albedo_texture = ExtResource("1_t52m3")
+normal_texture = ExtResource("2_e7mj8")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_ul3j3"]
+name = "packed_albedo_height"
+id = 1
+albedo_texture = ExtResource("3_ovmss")
+normal_texture = ExtResource("4_8dy76")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_qtchh"]
+name = "packed_albedo_height"
+id = 2
+albedo_texture = ExtResource("5_k1khn")
+normal_texture = ExtResource("6_pbnjl")
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_3iaok"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_sh2qa")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_fhoe0"), SubResource("Terrain3DTextureAsset_ul3j3"), SubResource("Terrain3DTextureAsset_qtchh")])
+
 [sub_resource type="CurveTexture" id="CurveTexture_frjqa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrbsk"]
@@ -686,7 +730,7 @@ directional_shadow_max_distance = 448.0
 [node name="Isla" type="Terrain3D" parent="." unique_id=779232009]
 data_directory = "res://Isla"
 material = SubResource("Terrain3DMaterial_lyfsx")
-assets = ExtResource("1_5i6jr")
+assets = SubResource("Terrain3DAssets_3iaok")
 top_level = true
 metadata/_edit_lock_ = true
 
@@ -694,15 +738,15 @@ metadata/_edit_lock_ = true
 transform = Transform3D(2500, 0, 0, 0, 2500, 0, 0, 0, 2500, -0.98017883, -10.097961, -164.38943)
 mesh = SubResource("PlaneMesh_lb7mg")
 
-[node name="Player" parent="." unique_id=1188762420 instance=ExtResource("2_av43g")]
+[node name="Player" parent="." unique_id=1188762420 instance=ExtResource("7_hr368")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.597336, 4.259233, -6.998749)
 
-[node name="HUD" parent="." unique_id=1239642511 instance=ExtResource("3_soi3k")]
+[node name="HUD" parent="." unique_id=1239642511 instance=ExtResource("8_skv4x")]
 
 [node name="Pause" type="Node3D" parent="." unique_id=82725671]
 process_mode = 3
 visible = false
-script = ExtResource("1_2eybh")
+script = ExtResource("9_hpyjq")
 
-[node name="Options" parent="Pause" unique_id=1679884832 instance=ExtResource("1_2gltf")]
+[node name="Options" parent="Pause" unique_id=1679884832 instance=ExtResource("10_8rnj8")]
 custom_minimum_size = Vector2(64, 64)

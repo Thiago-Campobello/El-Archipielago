@@ -1,0 +1,440 @@
+[gd_scene format=3 uid="uid://dv45hqs1of3ef"]
+
+[ext_resource type="Script" uid="uid://dpmvfvxk1fp4o" path="res://scenes/menu_principal.gd" id="1_ffwdg"]
+[ext_resource type="Texture2D" uid="uid://b2s77gqo0gckk" path="res://IMGS/Fondos/isla.imagen.menu.principal.jpg" id="2_ysajj"]
+[ext_resource type="Script" uid="uid://ci45yahlcavr4" path="res://scenes/opciones-menu.gd" id="3_q4epk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cjknc"]
+font_size = 32
+
+[node name="MenuPrincipal" type="Control" unique_id=744917959]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ffwdg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=505731254]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ysajj")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Opciones" type="Control" parent="." unique_id=2044250101]
+visible = false
+anchors_preset = 0
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 351.0
+offset_bottom = -6.0
+script = ExtResource("3_q4epk")
+
+[node name="Salir" type="Button" parent="Opciones" unique_id=2021056256]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 29.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 28
+text = "Volver"
+
+[node name="Titulo" type="Label" parent="Opciones" unique_id=443492339]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 7.0
+offset_right = 778.0
+offset_bottom = 52.0
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_cjknc")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Opciones" unique_id=1260081848]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 70.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Container" type="VBoxContainer" parent="Opciones/ScrollContainer" unique_id=267403732]
+layout_mode = 2
+alignment = 1
+
+[node name="Fila_adelante" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1122540457]
+layout_mode = 2
+theme_override_constants/separation = 174
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_adelante" unique_id=657827188]
+layout_mode = 2
+text = "Mover hacia adelante"
+
+[node name="Adelante" type="Button" parent="Opciones/ScrollContainer/Container/Fila_adelante" unique_id=367209187]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_izq" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=979621588]
+layout_mode = 2
+theme_override_constants/separation = 170
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_izq" unique_id=532780687]
+layout_mode = 2
+text = "Mover hacia izquierda"
+
+[node name="Izquierda" type="Button" parent="Opciones/ScrollContainer/Container/Fila_izq" unique_id=971456390]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_Atras" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=641649016]
+layout_mode = 2
+theme_override_constants/separation = 201
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_Atras" unique_id=1543919460]
+layout_mode = 2
+text = "Mover hacia Atras"
+
+[node name="Atras" type="Button" parent="Opciones/ScrollContainer/Container/Fila_Atras" unique_id=229972084]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_derecha" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1793674527]
+layout_mode = 2
+theme_override_constants/separation = 179
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_derecha" unique_id=119162780]
+layout_mode = 2
+text = "Mover hacia derecha"
+
+[node name="Derecha" type="Button" parent="Opciones/ScrollContainer/Container/Fila_derecha" unique_id=223982810]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_saltar" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1159001169]
+layout_mode = 2
+theme_override_constants/separation = 295
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_saltar" unique_id=652865096]
+layout_mode = 2
+text = "Saltar"
+
+[node name="Saltar" type="Button" parent="Opciones/ScrollContainer/Container/Fila_saltar" unique_id=634685943]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_correr" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=2121978253]
+layout_mode = 2
+theme_override_constants/separation = 291
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_correr" unique_id=1632091674]
+layout_mode = 2
+text = "Correr"
+
+[node name="Correr" type="Button" parent="Opciones/ScrollContainer/Container/Fila_correr" unique_id=951834058]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_apuntar" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1318695205]
+layout_mode = 2
+theme_override_constants/separation = 277
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_apuntar" unique_id=1918387763]
+layout_mode = 2
+text = "Apuntar"
+
+[node name="Apuntar" type="Button" parent="Opciones/ScrollContainer/Container/Fila_apuntar" unique_id=1502597722]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_disparar" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=249919976]
+layout_mode = 2
+theme_override_constants/separation = 270
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_disparar" unique_id=590856649]
+layout_mode = 2
+text = "Disparar "
+
+[node name="Disparar" type="Button" parent="Opciones/ScrollContainer/Container/Fila_disparar" unique_id=2089593856]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_recargar" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1805617548]
+layout_mode = 2
+theme_override_constants/separation = 268
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_recargar" unique_id=1298835246]
+layout_mode = 2
+text = "Recargar "
+
+[node name="Recargar" type="Button" parent="Opciones/ScrollContainer/Container/Fila_recargar" unique_id=835231235]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_alt_camara" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=40199054]
+layout_mode = 2
+theme_override_constants/separation = 212
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_alt_camara" unique_id=1960055733]
+layout_mode = 2
+text = "Alternar Cámara"
+
+[node name="Alt_camara" type="Button" parent="Opciones/ScrollContainer/Container/Fila_alt_camara" unique_id=1639595702]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_desbqm" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1296727197]
+layout_mode = 2
+theme_override_constants/separation = 181
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_desbqm" unique_id=1735845305]
+layout_mode = 2
+text = "Desbloquear mouse "
+
+[node name="Desblqm" type="Button" parent="Opciones/ScrollContainer/Container/Fila_desbqm" unique_id=1894471476]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot1" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=307038396]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot1" unique_id=911032739]
+layout_mode = 2
+text = "Atajo rapido slot 1"
+
+[node name="Slot1" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot1" unique_id=1315319795]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot2" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1403353523]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot2" unique_id=191946049]
+layout_mode = 2
+text = "Atajo rapido slot 2"
+
+[node name="Slot2" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot2" unique_id=234501858]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot3" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1825475609]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot3" unique_id=1527949335]
+layout_mode = 2
+text = "Atajo rapido slot 3"
+
+[node name="Slot3" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot3" unique_id=1662282726]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot4" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1488298296]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot4" unique_id=700824370]
+layout_mode = 2
+text = "Atajo rapido slot 4"
+
+[node name="Slot4" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot4" unique_id=660178185]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot5" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=233011437]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=1944051552]
+layout_mode = 2
+text = "Atajo rapido slot 5"
+
+[node name="Slot5" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot5" unique_id=388697619]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="Fila_slot6" type="HBoxContainer" parent="Opciones/ScrollContainer/Container" unique_id=1749382050]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Opciones/ScrollContainer/Container/Fila_slot6" unique_id=1499209390]
+layout_mode = 2
+text = "Atajo rapido slot 6"
+
+[node name="Slot6" type="Button" parent="Opciones/ScrollContainer/Container/Fila_slot6" unique_id=571747202]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+localize_numeral_system = false
+theme_override_constants/h_separation = 4
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="PanelPrincipal" type="VBoxContainer" parent="." unique_id=2082369358]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.5
+offset_top = -49.0
+offset_right = 174.5
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="BotonJugar" type="Button" parent="PanelPrincipal" unique_id=87157664]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "JUGAR"
+
+[node name="BotonOpciones" type="Button" parent="PanelPrincipal" unique_id=1232982545]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "OPCIONES"
+
+[node name="BotonSalir" type="Button" parent="PanelPrincipal" unique_id=365480609]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "SALIR"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=739474906]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelSubmenuJugar" type="VBoxContainer" parent="." unique_id=1849201413]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -37.0
+offset_right = 90.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotonModoHistoria" type="Button" parent="PanelSubmenuJugar" unique_id=710781291]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Historia"
+
+[node name="BotonSaltarHistoria" type="Button" parent="PanelSubmenuJugar" unique_id=1269579416]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Saltar Historia"
+
+[node name="BotonVolver" type="Button" parent="PanelSubmenuJugar" unique_id=155581343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Volver"
+
+[connection signal="pressed" from="Opciones/Salir" to="Opciones" method="_on_salir_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_adelante/Adelante" to="Opciones" method="_on_adelante_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_izq/Izquierda" to="Opciones" method="_on_izquierda_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_Atras/Atras" to="Opciones" method="_on_atras_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_derecha/Derecha" to="Opciones" method="_on_derecha_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_saltar/Saltar" to="Opciones" method="_on_saltar_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_correr/Correr" to="Opciones" method="_on_correr_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_apuntar/Apuntar" to="Opciones" method="_on_apuntar_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_disparar/Disparar" to="Opciones" method="_on_disparar_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_recargar/Recargar" to="Opciones" method="_on_recargar_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_alt_camara/Alt_camara" to="Opciones" method="_on_alt_camara_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_desbqm/Desblqm" to="Opciones" method="_on_desblqm_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot1/Slot1" to="Opciones" method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot2/Slot2" to="Opciones" method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot3/Slot3" to="Opciones" method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot4/Slot4" to="Opciones" method="_on_slot_4_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot5/Slot5" to="Opciones" method="_on_slot_5_pressed"]
+[connection signal="pressed" from="Opciones/ScrollContainer/Container/Fila_slot6/Slot6" to="Opciones" method="_on_slot_6_pressed"]
