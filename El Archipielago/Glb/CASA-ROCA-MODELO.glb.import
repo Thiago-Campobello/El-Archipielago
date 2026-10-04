@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cg3nym56teq7e"
-path="res://.godot/imported/modeloisla.glb-21f77a66916b2fba524986aaff6a291b.scn"
+uid="uid://edkpflr6td82"
+path="res://.godot/imported/CASA-ROCA-MODELO.glb-b5c9f831f3fa3fee5cc6705ef1320411.scn"
 
 [deps]
 
-source_file="res://Glb/modeloisla.glb"
-dest_files=["res://.godot/imported/modeloisla.glb-21f77a66916b2fba524986aaff6a291b.scn"]
+source_file="res://Glb/CASA-ROCA-MODELO.glb"
+dest_files=["res://.godot/imported/CASA-ROCA-MODELO.glb-b5c9f831f3fa3fee5cc6705ef1320411.scn"]
 
 [params]
 

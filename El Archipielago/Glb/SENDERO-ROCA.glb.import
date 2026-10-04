@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cr5ub8e7crdxd"
-path="res://.godot/imported/martillo.glb-39244ef359fb74c1b9670ab310aec27b.scn"
+uid="uid://dk3hjsw6d7q7y"
+path="res://.godot/imported/SENDERO-ROCA.glb-a0ea8aeffc22282f6c089483353c5b33.scn"
 
 [deps]
 
-source_file="res://martillo.glb"
-dest_files=["res://.godot/imported/martillo.glb-39244ef359fb74c1b9670ab310aec27b.scn"]
+source_file="res://Glb/SENDERO-ROCA.glb"
+dest_files=["res://.godot/imported/SENDERO-ROCA.glb-a0ea8aeffc22282f6c089483353c5b33.scn"]
 
 [params]
 

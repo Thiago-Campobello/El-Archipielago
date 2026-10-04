@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cvh5eym3haro8"
-path="res://.godot/imported/ISLA_ARCHIPIELAGO_COLISION.glb-a0aa56f2d503f2013c274d676029d2a2.scn"
+uid="uid://ds1guk7xopsyx"
+path="res://.godot/imported/CASA-MADERA-PORTON.glb-26e65a6a725917a10ed23b4d72f3c88f.scn"
 
 [deps]
 
-source_file="res://Glb/ISLA_ARCHIPIELAGO_COLISION.glb"
-dest_files=["res://.godot/imported/ISLA_ARCHIPIELAGO_COLISION.glb-a0aa56f2d503f2013c274d676029d2a2.scn"]
+source_file="res://Glb/CASA-MADERA-PORTON.glb"
+dest_files=["res://.godot/imported/CASA-MADERA-PORTON.glb-26e65a6a725917a10ed23b4d72f3c88f.scn"]
 
 [params]
 
@@ -42,4 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=0
+gltf/texture_map_mode=1
