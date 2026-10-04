@@ -3,7 +3,7 @@
 > **Nuestro proyecto data de un juego modo historia en el que deberás adentrarte en un mundo silencioso lleno de mar e islas.**
 
 [![Godot](https://img.shields.io/badge/Engine-Godot-478CBF?logo=godot-engine\&logoColor=white)](https://godotengine.org/)
-[![Version](https://img.shields.io/badge/Alpha-v1.9-blue)](#-historial-de-versiones)
+[![Version](https://img.shields.io/badge/Alpha-v1.9.1-blue)](#-historial-de-versiones)
 
 ## 👥 Integrantes
 
@@ -88,12 +88,16 @@ Se agrega el addon Terrain3D de godot para poder diseñar el terreno de la isla,
 Se agregó un menu principal antes de iniciar el juego, con un apartado con una instruccion a la historia, se reestructuraron códigos tanto del personaje, camara, hud, armas e sistema de inventario para evitar posibles bugs, que este sea mas entendible y ordenado y ademas que sea más general, no depender de una variable que en el futuro pueda cambiar para que los posibles cambios a futuro sean mas simples como por ejemplo para los distintos tipos de armas, si las tirarías al piso, habrían que hacer una escena de cada uno en el piso con su código, a partir de la módificacion en el código de las armas del suelo, esto ya no es necesario, este código se volvió general, toma tanto la colisión como el mesh del arma que fue tirada y no un mesh o colisión predeterminada
 
 **Fecha:** 3/10/2026
+### 🟡 Alpha v1.9.1
+Había un error al intentar abrir la ultima version por un código el cual se ve que se había corrompido en la subida de archivos, ademas, se añadió el inicio del pueblo con 3 tipos de casas y un sendero, a proximos posibles cambios de lugar, organizacion y mas variación
+
+**Fecha:** 4/10/2026
 ## 📊 Estado del proyecto
 
-**Versión actual:** `Alpha v1.9`
+**Versión actual:** `Alpha v1.9.1`
 
 ```text
-█████░░░░░░░░░░░░░░░ 27%
+█████░░░░░░░░░░░░░░░ 28%
 ```
 
 > El porcentaje es aproximado y representa el estado general del desarrollo.
